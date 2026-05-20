@@ -1,6 +1,19 @@
-# BMW-Global-Sales-Data-Analysis-Using-Apache-PySpark
-This project showcases real-world data engineering and analytics using PySpark on a large-scale automotive dataset spanning 2010–2024. The analysis was performed without pandas to demonstrate scalable big-data processing similar to industry practices used by automotive OEMs such as BMW.
+BMW Global Sales Data Analysis Using Apache PySpark
 
-The dataset was cleaned and standardized by resolving missing values, inconsistent formats, unrealistic engine sizes, abnormal mileage values, and issues specific to electric and hybrid vehicles, while maintaining data integrity. Advanced analytical metrics were developed, including year-over-year sales growth, demand indices, rolling three-year averages, price deciles, mileage bands and regional sales share.
+This project builds a scalable big-data pipeline using Apache PySpark to process, clean and analyze BMW worldwide sales data spanning 15 years from 2010 to 2024. 
 
-Further analysis included cohort analysis to evaluate model age performance, price elasticity estimation, seasonality checks, and anomaly detection to replicate OEM-level analytics workflows. The project concludes with visualizations highlighting best-selling models, global sales trends and price distribution patterns, offering insights into BMW’s market evolution over time.
+The goal is to simulate a real data engineering workflow that a global automotive team would use to uncover regional trends, fuel type shifts, pricing patterns and model-level performance.
+
+Pipeline Overview : 
+
+The pipeline is structured across three phases. The first phase covers data extraction using PySpark CSV reader with automatic schema inference across 50,000 records and 11 features. 
+
+The second phase covers data processing including schema standardization, missing value handling, categorical normalization, cross-field validation, IQR-based outlier detection and Z-score price anomaly detection. The third phase covers data visualization including top models by global sales, year-over-year sales trends from 2010 to 2024 and price distribution by fuel type across Diesel, Electric, Hybrid and Petrol.
+
+Key Features :
+
+Full PySpark pipeline with no pandas dependency, designed for scalability and reproducibility. Feature engineering including year-over-year growth, rolling 3-year averages, demand index, price deciles and mileage bands. Cohort analysis tracking how model age affects sales performance. Special handling for Electric and Hybrid vehicles with custom engine validation logic. Audit trail preserving original column values and boolean flags for every cleaned or removed record.
+
+Tech Stack : Python, Apache PySpark, PySpark SQL, Matplotlib, Kaggle Dataset
+
+Dataset : https://www.kaggle.com/datasets/ahmadrazakashif/bmw-worldwide-sales-records20102024

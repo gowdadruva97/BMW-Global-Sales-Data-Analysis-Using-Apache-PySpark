@@ -1,5 +1,3 @@
-BMW Global Sales Data Analysis Using Apache PySpark
-
 This project builds a scalable big-data pipeline using Apache PySpark to process, clean and analyze BMW worldwide sales data spanning 15 years from 2010 to 2024. 
 
 The goal is to simulate a real data engineering workflow that a global automotive team would use to uncover regional trends, fuel type shifts, pricing patterns and model-level performance.
